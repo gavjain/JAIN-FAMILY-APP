@@ -13,31 +13,80 @@
     <script type="module" src="form-validation.js"></script>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container my-5">
         <div class="row justify-content-center">
-            <div class="col-6">
-                <h3 class="mb-3">SINGUP</h3>
+            <div class="col-8">
+                <h3 class="mb-5 text-center">JAIN APP SIGN UP</h3>
 
-                <form id="signup">
-                    <div class="mb-3">
-                        <label for="first_name" class="form-label">FIRST NAME</label>
-                        <input type="text" name="first_name" class="form-control" id="first_name" aria-describedby="first name">
+                <form id="signup_form" class="row justify-content-center">
+                    <div class="mb-4 col-6">
+                        <label for="first_name" class="form-label">First Name</label>
+                        <input type="text" name="first_name" class="form-control" id="first_name" aria-describedby="firstNameErr" required>
+                        <div id="firstNameErr" class="form-text text-danger d-none"></div>
                     </div>
             
-                    <div class="mb-3">
-                        <label for="last_name" class="form-label">LAST NAME</label>
-                        <input type="text" name="last_name" class="form-control" id="last_name" aria-describedby="last name">
+                    <div class="mb-4 col-6">
+                        <label for="last_name" class="form-label">Last Name</label>
+                        <input type="text" name="last_name" class="form-control" id="last_name" aria-describedby="lastNameErr" required>
+                        <div id="lastNameErr" class="form-text text-danger d-none"></div>
                     </div>
             
-                    <div class="mb-3">
-                        <label for="user_email" class="form-label">EMAIL</label>
-                        <input type="email" name="user_email" class="form-control" id="user_email" aria-describedby="emailHelp">
+                    <div class="mb-4 col-6">
+                        <label for="user_email" class="form-label">Email</label>
+                        <input type="email" name="user_email" class="form-control" id="user_email" aria-describedby="emailErr" required>
+                        <div id="emailErr" class="form-text text-danger d-none"></div>
+                    </div>
+
+                    <div class="mb-4 col-6">
+                        <label for="user_phone" class="form-label">Phone Number</label>
+                        <input type="number" name="user_phone" class="form-control" id="user_phone" aria-describedby="phoneErr" required>
+                        <div id="phoneErr" class="form-text text-danger d-none"></div>
+                    </div>
+
+                    <div class="mb-4 col-3">
+                        <label for="user_dob" class="form-label">Your DOB</label>
+                        <input type="date" name="user_dob" class="form-control" id="user_dob" aria-describedby="dobErr" required>
+                        <div id="dobErr" class="form-text text-danger d-none"></div>
+                    </div>
+
+                    <div class="mb-4 col-3">
+                        <label name="user_gender" for="user_gender" class="form-label">Gender</label>
+                        <select class="form-select" id="user_gender" aria-label="Default select example">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-4 col-6">
+                        <label for="user_father" class="form-label">Father's Name</label>
+                        <input type="text" name="user_father" class="form-control" id="user_father" aria-describedby="fatherErr" required>
+                        <div id="fatherErr" class="form-text text-danger d-none"></div>
                     </div>
 
                     
+
+                    <div class="mb-4 col-12">
+                        <label for="user_education" class="form-label">Education/Business</label>
+                        <input type="text" name="user_education" class="form-control" id="user_education" aria-describedby="eduErr" required>
+                        <div id="eduErr" class="form-text text-danger d-none"></div>
+                    </div>
+
+                    <div class="mb-4 col-12">
+                        <label for="user_address" class="form-label">Current Location</label>
+                        <input type="text" name="user_address" class="form-control" id="user_address" aria-describedby="addressErr" required>
+                        <div id="addressErr" class="form-text text-danger d-none"></div>
+                    </div>
+
+                    <div class="mb-4 col-12">
+                        <label for="user_native" class="form-label">Native Land</label>
+                        <input type="text" name="user_native" class="form-control" id="user_native" aria-describedby="nativeErr" required>
+                        <div id="nativeErr" class="form-text text-danger d-none"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-success mt-1 py-2 col-3" id="send_info">SINGUP</button>
+
                 </form>
-                <button class="btn btn-success" id="send_info">SINGUP</button>
-                
             </div>
         </div>
     </div>
