@@ -18,28 +18,28 @@
             <div class="col-8">
                 <h3 class="mb-5 text-center">JAIN APP SIGN UP</h3>
 
-                <form id="signup_form" class="row justify-content-center">
+                <!-- <form id="signup_form" class="row justify-content-center">
                     <div class="mb-4 col-6">
                         <label for="first_name" class="form-label">First Name</label>
-                        <input type="text" name="first_name" class="form-control" id="first_name" aria-describedby="firstNameErr" required>
+                        <input type="text" name="first_name" class="form-control" id="first_name" aria-describedby="firstNameErr">
                         <div id="firstNameErr" class="form-text text-danger d-none"></div>
                     </div>
             
                     <div class="mb-4 col-6">
                         <label for="last_name" class="form-label">Last Name</label>
-                        <input type="text" name="last_name" class="form-control" id="last_name" aria-describedby="lastNameErr" required>
+                        <input type="text" name="last_name" class="form-control" id="last_name" aria-describedby="lastNameErr">
                         <div id="lastNameErr" class="form-text text-danger d-none"></div>
                     </div>
             
                     <div class="mb-4 col-6">
                         <label for="user_email" class="form-label">Email</label>
-                        <input type="email" name="user_email" class="form-control" id="user_email" aria-describedby="emailErr" required>
+                        <input type="email" name="user_email" class="form-control" id="user_email" aria-describedby="emailErr">
                         <div id="emailErr" class="form-text text-danger d-none"></div>
                     </div>
 
                     <div class="mb-4 col-6">
                         <label for="user_phone" class="form-label">Phone Number</label>
-                        <input type="number" name="user_phone" class="form-control" id="user_phone" aria-describedby="phoneErr" required>
+                        <input type="number" name="user_phone" class="form-control" id="user_phone" placeholder="984*******" aria-describedby="phoneErr">
                         <div id="phoneErr" class="form-text text-danger d-none"></div>
                     </div>
 
@@ -84,9 +84,24 @@
                         <div id="nativeErr" class="form-text text-danger d-none"></div>
                     </div>
 
-                    <button type="submit" class="btn btn-success mt-1 py-2 col-3" id="send_info">SINGUP</button>
+                    <button type="submit" class="btn btn-success mt-1 py-2 col-3" id="send_info" >SINGUP</button>
 
+                </form> -->
+
+
+                <h5>Enter phone number</h5>
+                <form class="mb-5">
+                    <input type="number" name="user_phone" class="form-control" id="user_phone" placeholder="+977-984*******" aria-describedby="phoneErr">
+                    <div id="recaptcha-container"></div>
+                    <button class="btn btn-success mt-1 py-2 col-3 d-none" id="otp_btn" onclick="getOTP()">SEND OTP</button>
                 </form>
+
+                <h5>Enter verification code</h5>
+                <form>
+                    <input type="text" id="verificationCode" placeholder="Enter verification code" >
+                    <button type="button" onclick="codeVerify();">Verify code</button>
+                </form>
+
             </div>
         </div>
     </div>
